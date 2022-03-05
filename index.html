@@ -177,9 +177,13 @@
 					makeCode();
 					setTimeout(() => {
 						const qelem = document.getElementById("qrcode").getElementsByTagName('img')[0];
+						alert(qelem)
+
 						const dlink = document.getElementById("qrdl");
+						alert(dlink)
+
 						const qr = qelem.getAttribute("src");
-						alert(qr)
+						
 						dlink.setAttribute("href", qr);
 						dlink.removeAttribute("hidden");
 						dlink.setAttribute("download", "qr-code.png");
