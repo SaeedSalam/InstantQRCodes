@@ -103,6 +103,9 @@
 			height: 160px;
 			margin: 15px auto 0;
 		}
+		#text, #qrbutton {
+			margin-top: 10px;
+		}
 	</style>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0F0NTH7B90"></script>
@@ -154,8 +157,8 @@
 				let dlink = document.querySelector("#qrdl");
 				let qr = qelem.getAttribute("src");
 				dlink.setAttribute("href", qr);
-				dlink.setAttribute("download", "qr-code.png");
 				dlink.removeAttribute("hidden");
+				dlink.setAttribute("download", "qr-code.png");
 			}, 500);
 		}
 
