@@ -1339,6 +1339,8 @@ var QRCode;
         Drawing.prototype.makeImage = function () {
           if (this._bIsPainted) {
             _safeSetDataURI.call(this, _onMakeImage);
+          } else {
+            alert("error");
           }
         };
 
