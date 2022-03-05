@@ -7,7 +7,103 @@
 	<title>InstantQRCodes - Generate QR Codes Instantly, for 100% Free!</title>
 	<meta name="Description"
 		content="Instant QR Codes hepls to generate qr codes for your website or any other url instantly and for 100% free!" />
-	<link rel="stylesheet" href="css/style.css" />
+	<style>
+		html {
+			line-height: 1.15;
+			/* 1 */
+			-webkit-text-size-adjust: 100%;
+			/* 2 */
+		}
+
+		body {
+			margin: 0;
+		}
+
+		main {
+			display: block;
+		}
+
+		h1 {
+			font-size: 2em;
+			margin: 0.67em 0;
+		}
+
+		a {
+			background-color: transparent;
+		}
+
+		b,
+		strong {
+			font-weight: bolder;
+		}
+
+		sub,
+		sup {
+			font-size: 75%;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline;
+		}
+
+		sub {
+			bottom: -0.25em;
+		}
+
+		sup {
+			top: -0.5em;
+		}
+
+		img {
+			border-style: none;
+		}
+
+		button,
+		input,
+		optgroup,
+		select,
+		textarea {
+			font-family: inherit;
+			font-size: 100%;
+			line-height: 1.15;
+			margin: 0;
+		}
+
+		button,
+		input {
+			overflow: visible;
+		}
+
+		button,
+		select {
+			text-transform: none;
+		}
+
+		button,
+		[type="button"],
+		[type="reset"],
+		[type="submit"] {
+			-webkit-appearance: button;
+		}
+
+		textarea {
+			overflow: auto;
+		}
+
+		[hidden] {
+			display: none;
+		}
+
+		.container {
+			padding: 20px;
+			text-align: center;
+		}
+
+		#qrcode {
+			width: 160px;
+			height: 160px;
+			margin: 15px auto 0;
+		}
+	</style>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0F0NTH7B90"></script>
 	<script>
@@ -33,7 +129,7 @@
 		<a id="qrdl" hidden>Download your qr code</a>
 	</div>
 
-	<script src="js/qrcode.min.js"></script>
+	<script src="qrcode.min.js"></script>
 	<script>
 		var qrcode = new QRCode("qrcode", {
 			width: 160,
