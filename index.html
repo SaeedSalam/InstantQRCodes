@@ -153,14 +153,13 @@
 
 			qrcode.makeCode(elText.value);
 			setTimeout(() => {
-				let qelem = document.getElementById("qrcode").getElementsByTagName('img')[0];
-				let dlink = document.getElementById("qrdl");
-				let qr = qelem.getAttribute("src");
-				alert(qr);
+				const qelem = document.getElementById("qrcode").getElementsByTagName('img')[0];
+				const dlink = document.getElementById("qrdl");
+				const qr = qelem.getAttribute("src");				
 				dlink.setAttribute("href", qr);
 				dlink.removeAttribute("hidden");
 				dlink.setAttribute("download", "qr-code.png");
-			}, 500);
+			}, 1000);
 		}
 
 		function validURL(str) {
