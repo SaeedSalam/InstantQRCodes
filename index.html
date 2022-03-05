@@ -132,6 +132,7 @@
 		<div id="qrcode"></div>
 		<br />
 		<a id="qrdl">Download your qr code</a>
+		<p id="dp">this is test</p>
 	</div>
 
 	<script src="qrcode.js"></script>
@@ -178,11 +179,13 @@
 					setTimeout(() => {
 						const qelem = document.getElementById("qrImage");
 						const dlink = document.getElementById("qrdl");
+						const dp = document.getElementById("dp");						
 						const qr = qelem.getAttribute("src");
-						
+						dp.innerHTML = qr
+						// alert(qr)
 						dlink.setAttribute("href", qr);
 						// dlink.removeAttribute("hidden");
-						dlink.setAttribute("download", "qr-code.png");
+						dlink.setAttribute("download", "");
 					}, 500);
 				} else {
 					alert("please use a valid url");
