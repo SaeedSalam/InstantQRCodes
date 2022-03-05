@@ -134,7 +134,7 @@
 		<a id="qrdl" hidden>Download your qr code</a>
 	</div>
 
-	<script src="qrcode.js"></script>
+	<script src="qrcode.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function (event) {
 
@@ -156,15 +156,7 @@
 				}
 
 				qrcode.makeCode(elText.value);
-				setTimeout(() => {
-					const qelem = document.getElementById("qrcode").getElementsByTagName('img')[0];
-					const dlink = document.getElementById("qrdl");
-					
-					const qr = qelem.getAttribute("src");
-					dlink.setAttribute("href", qr);
-					dlink.removeAttribute("hidden");
-					dlink.setAttribute("download", "qr-code.png");
-				}, 500);
+
 			}
 
 			function validURL(str) {
@@ -183,6 +175,15 @@
 			function generateQr() {
 				if (validURL(document.getElementById("text").value)) {
 					makeCode();
+					setTimeout(() => {
+						const qelem = document.getElementById("qrcode").getElementsByTagName('img')[0];
+						const dlink = document.getElementById("qrdl");
+						const qr = qelem.getAttribute("src");
+						alert(qr)
+						dlink.setAttribute("href", qr);
+						dlink.removeAttribute("hidden");
+						dlink.setAttribute("download", "qr-code.png");
+					}, 500);
 				} else {
 					alert("please use a valid url");
 				}
