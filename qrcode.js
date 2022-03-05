@@ -1221,6 +1221,7 @@ var QRCode;
 
           // Check it just once
           if (self._bSupportDataURI === null) {
+            alert("no support");
             var el = document.createElement("img");
             var fOnError = function () {
               self._bSupportDataURI = false;
@@ -1244,9 +1245,11 @@ var QRCode;
               "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="; // the Image contains 1px data.
             return;
           } else if (self._bSupportDataURI === true && self._fSuccess) {
+            alert("cond 2");
             self._fSuccess.call(self);
           } else if (self._bSupportDataURI === false && self._fFail) {
             self._fFail.call(self);
+            alert("cond 3");
           }
         }
 
