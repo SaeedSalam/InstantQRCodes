@@ -131,10 +131,10 @@
 		<br />
 		<div id="qrcode"></div>
 		<br />
-		<a id="qrdl" hidden>Download your qr code</a>
+		<a id="qrdl">Download your qr code</a>
 	</div>
 
-	<script src="qrcode.min.js"></script>
+	<script src="qrcode.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function (event) {
 
@@ -176,16 +176,12 @@
 				if (validURL(document.getElementById("text").value)) {
 					makeCode();
 					setTimeout(() => {
-						const qelem = document.getElementById("qrcode").getElementsByTagName('img')[0];
-						alert(qelem)
-
+						const qelem = document.getElementById("qrImage");
 						const dlink = document.getElementById("qrdl");
-						alert(dlink)
-
 						const qr = qelem.getAttribute("src");
 						
 						dlink.setAttribute("href", qr);
-						dlink.removeAttribute("hidden");
+						// dlink.removeAttribute("hidden");
 						dlink.setAttribute("download", "qr-code.png");
 					}, 500);
 				} else {
