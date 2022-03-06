@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="InstantQRCodes" />
+    <title>InstantQRCodes - Generate QR Codes Instantly, for 100% Free!</title>
+    <meta
+      name="Description"
+      content="Instant QR Codes hepls to generate qr codes for your website or any other url instantly and for 100% free!"
+    />
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav
+      class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm"
+      id="mainNav"
+    >
+      <div class="container px-5">
+        <a class="navbar-brand fw-bold" href="/">Instant QR Codes</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link me-lg-3" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-lg-3" href="#faqs">FAQs</a>
+            </li>
+          </ul>
+          <!-- <button class="btn btn-primary px-3 mb-2 mb-lg-0">
+            <span class="d-flex align-items-center">
+              <i class="bi-person-fill me-2"></i>
+              <span class="small">My Account</span>
+            </span>
+          </button> -->
+        </div>
+      </div>
+    </nav>
+    <!-- Mashead header-->
+    <header class="masthead">
+      <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-8">
+            <!-- Mashead text and app badges-->
+            <div
+              class="mb-5 mb-lg-0 text-center text-lg-start position-relative"
+            >
+              <div class="mobile-image d-block d-lg-none">
+                <img
+                  src="assets/img/instantqrcodes.png"
+                  alt="instant qr code generator"
+                />
+              </div>
+              <h1 class="display-2 lh-2 mb-3">
+                Generate QR Codes, Free &amp; Instant.
+              </h1>
+              <p class="lead fw-normal text-muted mb-5">
+                QR Codes can be generated for any kind of links, customers can
+                just scan to reach your website from now.
+              </p>
+              <div>
+                <p class="lead fw-normal text-muted">
+                  Enter the link you want to show when qr code is scanned
+                </p>
+                <input
+                  id="qrUrl"
+                  type="url"
+                  value=""
+                  placeholder="for eg: https://instantqrcodes.com"
+                  required
+                  class="form-control my-2 form-control-lg"
+                />
+                <button
+                  type="button"
+                  id="qrButton"
+                  class="btn btn-primary my-2 btn-lg"
+                >
+                  Generate QR Code
+                </button>
+              </div>
+              <img src="assets/img/arrow.png" alt="arrow" id="arrow-image" />
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="qrcode-holder">
+              <img
+                src="assets/img/instantqrcodes.png"
+                alt="instant qr code generator"
+              />
+              <canvas id="qrcode" width="0" height="0"></canvas>
+            </div>
+            <a
+              id="downloadBtn"
+              hidden
+              class="btn btn-dark btn-sm py-2 px-3 btn-download"
+              >Download your qr code</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- App features section-->
+    <section id="features">
+      <div class="container px-5">
+        <div class="row gx-5">
+          <div class="col-md-6 mb-5">
+            <!-- Feature item-->
+            <div class="text-center">
+              <i class="bi-phone icon-feature text-gradient d-block mb-3"></i>
+              <h3 class="font-alt">Unlimited QR Codes</h3>
+              <p class="text-muted mb-0">
+                You can create as many QR codes as you wish, 100% free.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <!-- Feature item-->
+            <div class="text-center">
+              <i
+                class="bi-lightning icon-feature text-gradient d-block mb-3"
+              ></i>
+              <h3 class="font-alt">Instant Generation</h3>
+              <p class="text-muted mb-0">
+                The QR code will generated & will be available to download
+                instantly.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-5 mb-md-0">
+            <!-- Feature item-->
+            <div class="text-center">
+              <i class="bi-gift icon-feature text-gradient d-block mb-3"></i>
+              <h3 class="font-alt">Free to Use</h3>
+              <p class="text-muted mb-0">
+                This tool is free, and will always remain free.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <!-- Feature item-->
+            <div class="text-center">
+              <i
+                class="bi-patch-check icon-feature text-gradient d-block mb-3"
+              ></i>
+              <h3 class="font-alt">Safe & Secure</h3>
+              <p class="text-muted mb-0">
+                We do not store any kind of data for this tool, all are cleared
+                per session.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faqs -->
+    <section class="bg-light" id="faqs">
+      <div class="container px-5">
+        <div
+          class="row gx-5 align-items-center justify-content-center justify-content-lg-between"
+        >
+          <div class="col-12">
+            <h2 class="display-4 lh-1 mb-4">Frequently Asked Questions</h2>
+            <p class="lead fw-normal text-muted mb-3">
+              Here are the frequently asked questions related to Instant QR
+              Codes.
+            </p>
+            <dl>
+              <dt>What is InstantQRCodes?</dt>
+              <dd>A simple and instant way to generate QR codes.</dd>
+              <dt>Is this tool free?</dt>
+              <dd>Yes! This is free, and always will be free.</dd>
+              <dt>Are my QR codes saved in your database?</dt>
+              <dd>
+                No! we do not store any generated QR codes in our database, all
+                QR codes are per session. When you refresh the browser,
+                everything will be reset.
+              </dd>
+              <dt>Do you offer tracking of these QR code scans?</dt>
+              <dd>
+                Not at the moment, but this is in pipeline. We do plan to offer
+                all kinds of tracking features at a nominal rate :)
+              </dd>
+              <dt>How can i support this free service?</dt>
+              <dd>
+                Thank you for your kindness, if you find this tool useful,
+                please do spread the word about this tool in your circle. Thank
+                you!
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="bg-white text-center py-5">
+      <div class="container px-5">
+        <div class="text-muted-50 small">
+          <div class="mb-2">
+            &copy; InstantQRCodes.com 2022. All Rights Reserved.
+          </div>
+          <a href="privacy.html">Privacy</a>
+          <span class="mx-1">&middot;</span>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/qrious.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
