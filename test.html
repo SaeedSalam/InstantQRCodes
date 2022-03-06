@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>qrcode test</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <input type="text" id="ipfield" placeholder="add url" />
+        <button type="button" id="generateBtn" onclick="generateQr()">
+          generate qr code
+        </button>
+        <br />
+        <canvas id="qrcode"></canvas>
+        <br />
+        <a id="downloadBtn">Download</a>
+      </section>
+    </main>
+
+    <script src="qrious.js"></script>
+    <script>
+      const makeQR = (your_data) => {
+        let qrcodeContainer = document.getElementById("qrcode");
+        qrcodeContainer.innerHTML = "";
+        new QRious({
+          element: qrcodeContainer,
+          value: your_data,
+          size: 200,
+          padding: 10,
+        });
+        var link = document.getElementById("downloadBtn");
+        link.download = "qrcode.png";
+        link.href = document.getElementById("qrcode").toDataURL();
+      };
+
+      function generateQr() {
+        var getUrl = document.getElementById("ipfield").value;
+        makeQR(getUrl);
+      }
+    </script>
+  </body>
+</html>
